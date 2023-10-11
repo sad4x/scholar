@@ -4,7 +4,7 @@ from django.db import models
 class About(models.Model):
     title = models.CharField(max_length=40)
     text = models.TextField()
-    icon = models.CharField(max_length=40)
+    image = models.ImageField(upload_to='images/about', null=True,blank=True)
 
     def __str__(self):
         return self.title
